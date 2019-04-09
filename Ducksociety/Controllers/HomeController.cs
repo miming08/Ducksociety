@@ -13,25 +13,11 @@ namespace Ducksociety.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Test()
         {
-            ViewBag.Message = "Trench Trench Trench";
-
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Trench Trench Trench";
 
-            return View();
-        }
-
-        public ActionResult Vinztore()
-        {
-            ViewBag.Message = "Trench Trench Trench";
-
-            return View();
-        }
     }
 }
