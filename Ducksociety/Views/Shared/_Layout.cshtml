@@ -21,282 +21,32 @@
             </div>
             <div class="collapse navbar-collapse">
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "Index", "About")</li>
-                    <li>@Html.ActionLink("Duckstuff", "Index", "Duckstuff")</li>
-                    <li>@Html.ActionLink("Vinztore", "Index", "Vinztore")</li>
+                <h4 class="media-heading">
+                    <ul class="nav navbar-nav">
 
-                </ul>
+                        <li class="@(ViewBag.Current == "Home" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="@(ViewBag.Current == "About" ? "active" : "")">@Html.ActionLink("About", "Index", "About")</li>
+                        <li class="@(ViewBag.Current == "Duckstuff" ? "active" : "")">@Html.ActionLink("Duckstuff", "Index", "Duckstuff")</li>
+                        <li class="@(ViewBag.Current == "Vinztore" ? "active" : "")">@Html.ActionLink("Vinztore", "Index", "Vinztore")</li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="@(ViewBag.Current == "Login" ? "active" : "")"><span>@GlyphIcon.ByName("user")@Html.ActionLink("Login/Register", "Index", "Login")</span></li>
+
+                    </ul>
+                </h4>
             </div>
         </div>
     </header><!--/header-->
-    <section id="main-slider" class="no-margin">
-        <div class="carousel slide wet-asphalt">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content centered">
-                                    <h1 class="animation animated-item-1">Welcome to Ducksociety!</h1>
-                                    <h3 class="animation animated-item-1">Your One Duck Stop</h3>
-                                    <p class="animation animated-item-2">We are here to give you all the ducks you need in life.</p>
-                                    <br />
-                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content center centered">
-                                    <h2 class="boxed animation animated-item-1">DuckConnect</h2>
-                                    <br />
-                                    <p class="boxed animation animated-item-2">Share, Bond, and Smile with other Ducksters</p>
-                                    <br>
-                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="carousel-content centered">
-                                    <h2 class="animation animated-item-1">Nothing beats Duck Fashion!</h2>
-                                    <p class="animation animated-item-2">Duck Merch Now Available at Vinztore</p>
-                                    <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                <div class="centered">
-                                    <div class="embed-container">
-                                        <!--/.item
-
-      <iframe src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                    -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="icon-angle-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="icon-angle-right"></i>
-        </a>
-    </section><!--/#main-slider-->
-
-    <section id="services" class="emerald">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="media">
-                        <div class="pull-left">
-
-                            <i class="far fa-check-circle fa-5x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Quality Duck Stuff</h3>
-                            <p>We only give you the best duck stuff available in the Internet.</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fas fa-store fa-5x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Duck Merch</h3>
-                            <p>All high quality duck merch with the lowest price!</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="media">
-                        <div class="pull-left">
-                            <i class="fab fa-connectdevelop fa-5x"></i>
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Connect with Ducksters</h3>
-                            <p>Meet fellow ducksters with Ducksociety DuckConnect</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-            </div>
-        </div>
-    </section><!--/#services-->
-
-    <section id="recent-works">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <h3>Featured Ducks</h3>
-                    <p>Best Ducks of the Week</p>
-                    <div class="btn-group">
-                        <a class="btn btn-danger" href="#scroller" data-slide="prev"><i class="icon-angle-left"></i></a>
-                        <a class="btn btn-danger" href="#scroller" data-slide="next"><i class="icon-angle-right"></i></a>
-                    </div>
-                    <p class="gap"></p>
-                </div>
-                <div class="col-md-9">
-                    <div id="scroller" class="carousel slide">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                                                <h5>
-                                                    George The Water Racer
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="View Full Image" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                                                <h5>
-                                                    Robert The Standing Glory
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="View Full Image" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                                                <h5>
-                                                    Vince The Balance Master
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="View Full Image" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!--/.row-->
-                            </div><!--/.item-->
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                                                <h5>
-                                                    Flat Theme - Business Theme
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                                                <h5>
-                                                    Nova - Corporate site template
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-4">
-                                        <div class="portfolio-item">
-                                            <div class="item-inner">
-                                                <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                                                <h5>
-                                                    Fornax - Apps site template
-                                                </h5>
-                                                <div class="overlay">
-                                                    <a class="preview btn btn-danger" title="Malesuada fames ac turpis egestas" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="icon-eye-open"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--/.item-->
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.row-->
-        </div>
-    </section><!--/#recent-works-->
-
-
-    <section id="bottom" class="wet-asphalt">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Contact Us</h4>
-                    <form role="form">
-                        <div class="input-group">
-                            
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Name">
-                                <br /><br />
-                            
-                                <input type="text" class="form-control" autocomplete="off" placeholder="Enter your email">
-                                <br /><br />
-                                <textarea class="form-control" rows="4" placeholder="Your Message" style="resize:none"></textarea>
-                                <br /><br />
-                                <button class="btn btn-danger" type="button">Submit</button>
-                            </div>
-                            
-                        </form>
-                </div> <!--/.col-md-3-->
-
-
-                <div class="col-md-3 col-sm-6">
-                    <h4>Address</h4>
-                    <address>
-                        <strong>Ducksociety</strong><br>
-                        Panacan<br>
-                        Davao City, PH 8000<br>
-                        (+63)905-920-9418
-                    </address>
-
-                </div> <!--/.col-md-3-->
-
-
-            </div>
-        </div>
-    </section><!--/#bottom-->
+    @RenderBody()
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2019 Ducksociety All Rights Reserved. v1.02
+                    &copy; 2019 Ducksociety All Rights Reserved. v1.03
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right"></ul>
@@ -306,7 +56,7 @@
     </footer>
 
 
-    @RenderBody()
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

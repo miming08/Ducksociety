@@ -18,6 +18,12 @@ namespace Ducksociety.Controllers
             return View();
         }
 
+        public ActionResult ModalPopUp()
+        {
+            return View();
+        }
+
+
 
     }
 }
